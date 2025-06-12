@@ -1,0 +1,10 @@
+# pyproject.toml
+
+[tool.pyright]
+include = ["."]
+exclude = ["**/__pycache__"]
+extraPaths = ["../../env/lib/python3.12/site-packages/django-stubs", "../../env/lib/python3.12/site-packages"]
+reportMissingTypeStubs = false
+reportAttributeAccesIssue = ["warning"]
+reportMissingImports = ["warning"]
+reportUndefinedVariables = ["error"]
