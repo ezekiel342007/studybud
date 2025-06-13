@@ -1,17 +1,18 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>StudyBud</title>
-    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <link href="{% static 'styles/main.css' %}" rel="stylesheet">
   </head>
   <body>
     {% include "navbar.html" %}
     {% if messages %}
       <ul class="messages">
-        {% for message in messages %}
-          <li>{{ message}}</li>
+        {% for message in room_messages %}
+          <li>{{ message.body }}</li>
         {% endfor %}
       </ul>
     {% endif %}
